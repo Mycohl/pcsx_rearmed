@@ -24,7 +24,6 @@
 #include "cdrom.h"
 #include "ppf.h"
 #include "psxdma.h"
-#include "arm_features.h"
 
 /* logging */
 #if 0
@@ -1007,7 +1006,7 @@ finish:
 #endif
 }
 
-#ifdef HAVE_ARMV7
+#ifdef __ARM_ARCH_7A__
  #define ssat32_to_16(v) \
   asm("ssat %0,#16,%1" : "=r" (v) : "r" (v))
 #else

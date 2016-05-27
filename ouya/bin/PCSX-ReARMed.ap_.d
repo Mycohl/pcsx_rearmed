@@ -1,0 +1,25 @@
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/PCSX-ReARMed.ap_ \
+ : /home/mycohl/Dev/pcsx_rearmed/ouya/res/layout/main.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/layout/menuitem.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/layout/dialogitem.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable-mdpi/popup_bottom_dark.9.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/values/strings.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/values/arrays.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/color/selsta_down.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/color/selsta_up.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable-xhdpi/ouya_icon.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable-xhdpi/rearmed_logo.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/list_item_textcolor.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/select.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/start.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/list_item_background.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/dialog_item_background.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/drawable/dialog_item_textcolor.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/res/xml/preferences.xml \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/res/drawable-mdpi/popup_bottom_dark.9.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/res/drawable-xhdpi/ouya_icon.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/res/drawable-xhdpi/rearmed_logo.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/res/drawable/select.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/res/drawable/start.png \
+/home/mycohl/Dev/pcsx_rearmed/ouya/assets/GameFont.ttf \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/AndroidManifest.xml \

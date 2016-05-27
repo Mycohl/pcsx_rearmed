@@ -40,8 +40,10 @@ typedef struct {
 
 extern R3000Acpu *psxCpu;
 extern R3000Acpu psxInt;
+#if (defined(__x86_64__) || defined(__i386__) || defined(__sh__) || defined(__ppc__) || defined(__arm__)) && !defined(NOPSXREC)
 extern R3000Acpu psxRec;
 #define PSXREC
+#endif
 
 typedef union {
 #if defined(__BIGENDIAN__)

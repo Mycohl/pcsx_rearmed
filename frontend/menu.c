@@ -39,7 +39,6 @@
 #include "../plugins/dfinput/externals.h"
 #include "../plugins/dfsound/spu_config.h"
 #include "psemu_plugin_defs.h"
-#include "arm_features.h"
 #include "revision.h"
 
 #define REARMED_BIRTHDAY_TIME 1293306830	/* 25 Dec 2010 */
@@ -101,7 +100,7 @@ int scanlines, scanline_level = 20;
 int soft_scaling, analog_deadzone; // for Caanoo
 int soft_filter;
 
-#ifndef HAVE_PRE_ARMV7
+#ifdef __ARM_ARCH_7A__
 #define DEFAULT_PSX_CLOCK 57
 #define DEFAULT_PSX_CLOCK_S "57"
 #else
@@ -733,7 +732,7 @@ static unsigned short fname2color(const char *fname)
 static void draw_savestate_bg(int slot);
 
 #define MENU_ALIGN_LEFT
-#ifndef HAVE_PRE_ARMV7 // assume hires device
+#ifdef __ARM_ARCH_7A__ // assume hires device
 #define MENU_X2 1
 #else
 #define MENU_X2 0
@@ -853,7 +852,7 @@ me_bind_action emuctrl_actions[] =
 	{ "Toggle Frameskip ", 1 << SACTION_TOGGLE_FSKIP },
 	{ "Take Screenshot  ", 1 << SACTION_SCREENSHOT },
 	{ "Show/Hide FPS    ", 1 << SACTION_TOGGLE_FPS },
-#ifndef HAVE_PRE_ARMV7
+#ifdef __ARM_ARCH_7A__
 	{ "Switch Renderer  ", 1 << SACTION_SWITCH_DISPMODE },
 #endif
 	{ "Fast Forward     ", 1 << SACTION_FAST_FORWARD },
@@ -904,6 +903,8 @@ static void get_line(char *d, size_t size, const char *s)
 		len = size - 1;
 	strncpy(d, s, len);
 	d[len] = 0;
+
+	mystrip(d);
 }
 
 static void keys_write_all(FILE *f)
@@ -1010,10 +1011,7 @@ static void keys_load_all(const char *cfg)
 	while (p != NULL && (p = strstr(p, "binddev = ")) != NULL) {
 		p += 10;
 
-		// don't strip 'dev' because there are weird devices
-		// with names with space at the end
 		get_line(dev, sizeof(dev), p);
-
 		dev_id = in_config_parse_dev(dev);
 		if (dev_id < 0) {
 			printf("input: can't handle dev: %s\n", dev);
@@ -2522,7 +2520,7 @@ void menu_init(void)
 	me_enable(e_menu_gfx_options, MA_OPT_GAMMA,
 		plat_target.gamma_set != NULL);
 
-#ifdef HAVE_PRE_ARMV7
+#ifndef __ARM_ARCH_7A__
 	me_enable(e_menu_gfx_options, MA_OPT_SWFILTER, 0);
 #endif
 	me_enable(e_menu_gfx_options, MA_OPT_VARSCALER, MENU_SHOW_VARSCALER);

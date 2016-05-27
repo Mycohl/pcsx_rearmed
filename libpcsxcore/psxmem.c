@@ -43,27 +43,26 @@ void *psxMap(unsigned long addr, size_t size, int is_fixed,
 		enum psxMapTag tag)
 {
 	int flags = MAP_PRIVATE | MAP_ANONYMOUS;
-	int try_ = 0;
+	int tried_to_align = 0;
 	unsigned long mask;
 	void *req, *ret;
 
 retry:
 	if (psxMapHook != NULL) {
-		ret = psxMapHook(addr, size, 0, tag);
-		if (ret == NULL)
-			return NULL;
-	}
-	else {
-		/* avoid MAP_FIXED, it overrides existing mappings.. */
-		/* if (is_fixed)
-			flags |= MAP_FIXED; */
-
-		req = (void *)addr;
-		ret = mmap(req, size, PROT_READ | PROT_WRITE, flags, -1, 0);
-		if (ret == MAP_FAILED)
-			return NULL;
+		ret = psxMapHook(addr, size, is_fixed, tag);
+		goto out;
 	}
 
+	/* avoid MAP_FIXED, it overrides existing mappings.. */
+	/* if (is_fixed)
+		flags |= MAP_FIXED; */
+
+	req = (void *)addr;
+	ret = mmap(req, size, PROT_READ | PROT_WRITE, flags, -1, 0);
+	if (ret == MAP_FAILED)
+		return NULL;
+
+out:
 	if (addr != 0 && ret != (void *)addr) {
 		SysMessage("psxMap: warning: wanted to map @%08x, got %p\n",
 			addr, ret);
@@ -73,15 +72,16 @@ retry:
 			return NULL;
 		}
 
-		if (((addr ^ (unsigned long)ret) & ~0xff000000l) && try_ < 2)
+		if (ret != NULL && ((addr ^ (long)ret) & 0x00ffffff)
+		    && !tried_to_align)
 		{
 			psxUnmap(ret, size, tag);
 
 			// try to use similarly aligned memory instead
 			// (recompiler needs this)
-			mask = try_ ? 0xffff : 0xffffff;
-			addr = ((unsigned long)ret + mask) & ~mask;
-			try_++;
+			mask = (addr - 1) & ~addr & 0x07ffffff;
+			addr = (unsigned long)(ret + mask) & ~mask;
+			tried_to_align = 1;
 			goto retry;
 		}
 	}
@@ -137,8 +137,13 @@ int psxMemInit() {
 
 	psxM = psxMap(0x80000000, 0x00210000, 1, MAP_TAG_RAM);
 #ifndef RAM_FIXED
+#ifdef __BLACKBERRY_QNX__
 	if (psxM == NULL)
 		psxM = psxMap(0x77000000, 0x00210000, 0, MAP_TAG_RAM);
+#else
+	if (psxM == NULL)
+		psxM = psxMap(0x78000000, 0x00210000, 0, MAP_TAG_RAM);
+#endif
 #endif
 	if (psxM == NULL) {
 		SysMessage(_("mapping main RAM failed"));

@@ -1,0 +1,22 @@
+PCSX-ReARMed is a Sony Playstation (PSX/PSOne) emulator. It is an ARM-optimized fork of PCSX-Reloaded. It was developed by notaz for the OpenPandora handheld, using a dynamic recompiler by Ari64 and a NEON GPU plugin by Exophase. More information (and the source code) can be found at notaz's web site: http://notaz.gp2x.de/ 
+
+This version has been tweaked for the OUYA console. It features easily re-mappable buttons, and touchpad emulation for the PSX Select and Start buttons. 
+
+This is an emulator. It does not include ROMs. Various public domain demos are available at:
+http://www.zophar.net/pdroms/psx.html
+
+There is also a very nice public domain game available at:
+http://www.technospective.co.uk/emotion/
+
+
+NOTE ABOUT SCALERS:
+NEON optimized scalers are available, but I had some trouble getting the scanline scaler to work, so instead scanlines use hunterk's GLSL shader, tweaked a bit to work better on Tegra.
+
+NOTE ABOUT TOUCHPAD:
+Tap once to bring up the select/start menu, and then swipe to press down on the respective buttons. Tap again to release. Sometimes the cursor gets stuck at the edge of the screen, so if it doesn't respond, try swiping in the opposite direction.
+
+NOTE ABOUT OTHER PORTS:
+I realize that this has already been ported to the OUYA, but I do not like the version included with a certain all-in-one emulator suite. I couldn't get it to recognize the OUYA controller inputs, so I made this. If you are having the same issues I experienced, then I hope that you find this port satisfactory.
+
+========================================================================
+This is an emulator. You need a ROM to operate it. I included links to some sites with public domain ROMs in the description.

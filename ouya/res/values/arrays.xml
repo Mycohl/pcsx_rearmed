@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_pcsx_rearmed_frameskip_entries">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_frameskip_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_neon_scaling_entries">
+        <item>None</item>
+        <item>Scale2x</item>
+        <item>Eagle2x</item>
+        <item>Double Resolution (slow)</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_neon_scaling_values">
+        <item>none</item>
+        <item>scale2x</item>
+        <item>eagle2x</item>
+        <item>doubleres</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_scanlines_entries">
+        <item>None</item>
+        <item>25% Brightness</item>
+        <item>50% Brightness</item>
+        <item>75% Brightness</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_scanlines_values">
+        <item>none</item>
+        <item>25</item>
+        <item>50</item>
+        <item>75</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_region_entries">
+        <item>Auto</item>
+        <item>NTSC</item>
+        <item>PAL</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_region_values">
+        <item>Auto</item>
+        <item>NTSC</item>
+        <item>PAL</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_padtype_entries">
+        <item>Standard/Digital</item>
+        <item>Analog/DualShock</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_padtype_values">
+        <item>standard</item>
+        <item>analog</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_spu_interpolation_entries">
+        <item>Simple Interpolation</item>
+        <item>Gaussian Interpolation</item>
+        <item>Cubic Interpolation</item>
+        <item>No Interpolation</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_spu_interpolation_values">
+        <item>simple</item>
+        <item>gaussian</item>
+        <item>cubic</item>
+        <item>off</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_enabled_disabled_entries">
+        <item>Enabled</item>
+        <item>Disabled</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_enabled_disabled_values">
+        <item>enabled</item>
+        <item>disabled</item>
+    </string-array>
+
+    <string-array name="pref_pcsx_rearmed_on_off_entries">
+        <item>On</item>
+        <item>Off</item>
+    </string-array>
+    <string-array name="pref_pcsx_rearmed_on_off_values">
+        <item>on</item>
+        <item>off</item>
+    </string-array>
+</resources>

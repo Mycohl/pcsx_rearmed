@@ -23,7 +23,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../gpulib/gpu.h"
-#include "arm_features.h"
 
 #define u8 uint8_t
 #define s8 int8_t
@@ -172,7 +171,7 @@ int do_cmd_list(unsigned int *list, int list_len, int *last_cmd)
   unsigned int *list_end = list + list_len;
 
   linesInterlace = force_interlace;
-#ifdef HAVE_PRE_ARMV7 /* XXX */
+#ifndef __ARM_ARCH_7A__ /* XXX */
   linesInterlace |= gpu.status.interlace;
 #endif
 

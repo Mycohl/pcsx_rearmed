@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PCSX-ReARMed</string>
+
+    <string name="menu_main">Main Menu</string>
+    <string name="menu_item_loadgame">Load Game</string>
+    <string name="menu_item_resetgame">Reset Game</string>
+    <string name="menu_item_bootbios">Boot PSX BIOS</string>
+    <string name="menu_item_changedisc">Change Disc</string>
+    <string name="menu_item_savestate">Save State</string>
+    <string name="menu_item_loadstate">Load State</string>
+    <string name="menu_item_cheats">Cheats</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_exit">Exit</string>
+    <string name="menu_item_keybinds">Change Key Bindings</string>
+    
+    <string name="prefcat_emu">Emulation Settings</string>
+    <string name="prefcat_vid">Video Settings</string>
+    <string name="prefcat_aud">Sound Settings</string>
+    <string name="prefcat_inp">Input Settings</string>
+
+    <string name="pref_pcsx_rearmed_frameskip">Frameskip</string>
+    <string name="pref_pcsx_rearmed_frameskip_summ">The number of frames to skip.</string>
+    <string name="pref_pcsx_rearmed_frameskip_default">0</string>
+
+    <string name="pref_pcsx_rearmed_region">Region</string>
+    <string name="pref_pcsx_rearmed_region_summ">The emulated region of the PSX</string>
+    <string name="pref_pcsx_rearmed_region_default">Auto</string>
+
+    <string name="pref_pcsx_rearmed_pad1type">Joypad 1 Type</string>
+    <string name="pref_pcsx_rearmed_pad1type_summ">The type of joypad emulated for Player 1.</string>
+    <string name="pref_pcsx_rearmed_pad1type_default">standard</string>
+    <string name="pref_pcsx_rearmed_pad2type">Joypad 2 Type</string>
+    <string name="pref_pcsx_rearmed_pad2type_summ">The type of joypad emulated for Player 2.</string>
+    <string name="pref_pcsx_rearmed_pad2type_default">standard</string>
+
+    <string name="pref_pcsx_rearmed_drc">Dynamic Recompiler</string>
+    <string name="pref_pcsx_rearmed_drc_summ">Enable the MIPS->ARM dynamic recompiler.</string>
+    <string name="pref_pcsx_rearmed_drc_default">enabled</string>
+
+    <string name="pref_pcsx_rearmed_neon_interlace_enable">NEON Interlacing</string>
+    <string name="pref_pcsx_rearmed_neon_interlace_enable_summ">Enable interlaced rendering.</string>
+    <string name="pref_pcsx_rearmed_neon_interlace_enable_default">disabled</string>
+
+    <string name="pref_pcsx_rearmed_neon_scaling">NEON Scaling Filter</string>
+    <string name="pref_pcsx_rearmed_neon_scaling_summ">Scale the screen using NEON.</string>
+    <string name="pref_pcsx_rearmed_neon_scaling_default">none</string>
+
+    <string name="pref_pcsx_rearmed_scanlines">Scanlines</string>
+    <string name="pref_pcsx_rearmed_scanlines_summ">Draw scanlines while rendering.</string>
+    <string name="pref_pcsx_rearmed_scanlines_default">none</string>
+
+    <string name="pref_pcsx_rearmed_duping_enable">Frame Duplication</string>
+    <string name="pref_pcsx_rearmed_duping_enable_summ">Allow the renderer to duplicate frames.</string>
+    <string name="pref_pcsx_rearmed_duping_enable_default">on</string>
+
+    <string name="pref_pcsx_rearmed_spu_reverb">SPU Reverb</string>
+    <string name="pref_pcsx_rearmed_spu_reverb_summ">Enable reverb on the SPU emulator.</string>
+    <string name="pref_pcsx_rearmed_spu_reverb_default">on</string>
+
+    <string name="pref_pcsx_rearmed_spu_interpolation">SPU Interpolation</string>
+    <string name="pref_pcsx_rearmed_spu_interpolation_summ">The type of interpolation used for SPU emulation.</string>
+    <string name="pref_pcsx_rearmed_spu_interpolation_default">simple</string>
+
+    <string name="pref_pcsx_rearmed_spu_irq_always_on">SPU IRQ Always On</string>
+    <string name="pref_pcsx_rearmed_spu_irq_always_on_summ">Always use SPQ IRQ on the SPU emulator.</string>
+    <string name="pref_pcsx_rearmed_spu_irq_always_on_default">off</string>
+
+    <string name="pref_pcsx_rearmed_disable_xa">Disable XA Audio</string>
+    <string name="pref_pcsx_rearmed_disable_xa_summ">Disable playing of XA Audio.</string>
+    <string name="pref_pcsx_rearmed_disable_xa_default">off</string>
+
+    <string name="pref_pcsx_rearmed_disable_cdda">Disable CDDA Audio</string>
+    <string name="pref_pcsx_rearmed_disable_cdda_summ">Disable playing of CD Audio.</string>
+    <string name="pref_pcsx_rearmed_disable_cdda_default">off</string>
+
+    <string name="pref_maintain_psx_aspect_ratio">Maintain PSX Aspect Ratio</string>
+    <string name="pref_maintain_psx_aspect_ratio_summ">Maintain a 4:3 aspect ratio.</string>
+    <string name="pref_maintain_psx_aspect_ratio_default">on</string>
+
+    <string name="pref_emulate_select_start_touchpad_pad1">Emulate Select/Start (Player 1)</string>
+    <string name="pref_emulate_select_start_touchpad_pad1_default">enabled</string>
+    <string name="pref_emulate_select_start_touchpad_pad2">Emulate Select/Start (Player 2)</string>
+    <string name="pref_emulate_select_start_touchpad_pad2_default">enabled</string>
+    <string name="pref_emulate_select_start_touchpad_summ">Emulate the SELECT and START buttons with the touchpad.</string>
+
+    <string name="pref_pcsx_rearmed_bios_dir">BIOS Directory</string>
+    <string name="pref_pcsx_rearmed_bios_dir_summ">The directory containing PSX BIOS images.\nChanging this requires the game to be restarted.</string>
+    <string name="pref_pcsx_rearmed_bios_dir_browse">Select a directory with BIOS images:</string>
+
+    <string name="pref_pcsx_rearmed_bios_file">BIOS File</string>
+    <string name="pref_pcsx_rearmed_bios_file_summ">The PSX BIOS file from the BIOS directory.\nChanging this requires the game to be restarted.</string>
+
+    <string name="pref_pcsx_rearmed_save_dir">Save Directory</string>
+    <string name="pref_pcsx_rearmed_save_dir_summ">The directory containing memory card files and save states.</string>
+    <string name="pref_pcsx_rearmed_save_dir_browse">Select a directory for save files:</string>
+
+    <string name="pref_pcsx_rearmed_memcard1">Memory Card 1</string>
+    <string name="pref_pcsx_rearmed_memcard1_summ">The memory card file from the save directory to use in slot 1.</string>
+    <string name="pref_pcsx_rearmed_memcard2">Memory Card 2</string>
+    <string name="pref_pcsx_rearmed_memcard2_summ">The memory card file from the save directory to use in slot 2.</string>
+
+    <string name="pref_pcsx_rearmed_path_default">/sdcard/</string>
+
+    <string name="menu_savestate_help">[(R1)/+ Increment State Slot]  [(L1)/- Decrement State Slot]</string>
+    <string name="menu_savestate_selected">Selected save state slot</string>
+    <string name="menu_browse_dir_help"> [(O)/ENTER Forward]  [(U)/BKSP Back]\n   [(Y)/S Confirm]  [(A)/ESC Cancel]</string>
+    <string name="menu_browse_file_help"> [(O)/ENTER Select]  [(U)/BKSP Back]\n           [(A)/ESC Cancel]</string>
+    <string name="menu_browse_file_wrongext">Invalid file type</string>
+    <string name="menu_browse_noacc">Cannot access that file</string>
+    <string name="menu_bios_nofiles">No BIOS files found in the BIOS directory</string>
+    <string name="menu_memcard_nofiles">No memory card files found in the save directory</string>
+    <string name="menu_keybind_help">[(O)/ENTER Re-bind]  [(Y)/BKSP Reset]  [(A)/ESC Exit]</string>
+
+    <string name="error_nobios">No BIOS found, expect bugs!</string>
+    <string name="error_noemptyhle">Cannot empty the CD-ROM drive while using HLE!</string>
+
+    <string name="error_load">Error loading file: </string>
+    <string name="error_invalid_playerid_controller">Invalid Player ID for controller! You may need to restart your controller.</string>
+    <string name="error_nocontroller">does not have a controller connected!</string>
+
+    <string name="string_coming_soon">COMING SOON</string>
+
+    <string name="string_player">Player</string>
+    <string name="string_psx_cross">Cross</string>
+    <string name="string_psx_square">Square</string>
+    <string name="string_psx_triangle">Triangle</string>
+    <string name="string_psx_circle">Circle</string>
+    <string name="string_psx_up">Up</string>
+    <string name="string_psx_down">Down</string>
+    <string name="string_psx_left">Left</string>
+    <string name="string_psx_right">Right</string>
+    <string name="string_psx_l1">L1</string>
+    <string name="string_psx_r1">R1</string>
+    <string name="string_psx_l2">L2</string>
+    <string name="string_psx_r2">R2</string>
+    <string name="string_psx_l3">L3</string>
+    <string name="string_psx_r3">R3</string>
+    <string name="string_psx_select">Select</string>
+    <string name="string_psx_start">Start</string>
+    <string name="string_psx_lx">Left X Axis</string>
+    <string name="string_psx_ly">Left Y Axis</string>
+    <string name="string_psx_rx">Right X Axis</string>
+    <string name="string_psx_ry">Right Y Axis</string>
+
+    <string name="string_bind_button">Press a button or key to bind it to this control.</string>
+    <string name="string_bind_axis">Move a joystick axis to bind it to this control.</string>
+</resources>

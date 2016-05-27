@@ -32,6 +32,9 @@ void SetupSound(void)
 #endif
 #ifdef HAVE_LIBRETRO
 		REGISTER_DRIVER(libretro);
+#endif
+#ifdef HAVE_OUYA
+		REGISTER_DRIVER(ouya);
 #else
 		REGISTER_DRIVER(none);
 #endif

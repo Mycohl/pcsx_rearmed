@@ -26,7 +26,6 @@
 #include "../libpcsxcore/new_dynarec/new_dynarec.h"
 #include "../plugins/cdrcimg/cdrcimg.h"
 #include "../plugins/dfsound/spu_config.h"
-#include "arm_features.h"
 #include "revision.h"
 
 #ifndef NO_FRONTEND
@@ -41,6 +40,8 @@ static void check_memcards(void);
 #ifndef BOOT_MSG
 #define BOOT_MSG "Booting up..."
 #endif
+
+#define DEBUGLOG 0
 
 // don't include debug.h - it breaks ARM build (R1 redefined)
 void StartDebugger();
@@ -143,7 +144,7 @@ void emu_set_default_config(void)
 	spu_config.iVolume = 768;
 	spu_config.iTempo = 0;
 	spu_config.iUseThread = 1; // no effect if only 1 core is detected
-#ifdef HAVE_PRE_ARMV7 /* XXX GPH hack */
+#if defined(__arm__) && !defined(__ARM_ARCH_7A__) /* XXX GPH hack */
 	spu_config.iUseReverb = 0;
 	spu_config.iUseInterpolation = 0;
 	spu_config.iTempo = 1;
@@ -772,7 +773,7 @@ int emu_save_state(int slot)
 		return ret;
 
 	ret = SaveState(fname);
-#ifdef HAVE_PRE_ARMV7 /* XXX GPH hack */
+#if defined(__arm__) && !defined(__ARM_ARCH_7A__) /* XXX GPH hack */
 	sync();
 #endif
 	SysPrintf("* %s \"%s\" [%d]\n",
@@ -810,11 +811,15 @@ void SysPrintf(const char *fmt, ...) {
 #include <android/log.h>
 
 void SysPrintf(const char *fmt, ...) {
+#if DEBUGLOG
 	va_list list;
 
 	va_start(list, fmt);
 	__android_log_vprint(ANDROID_LOG_INFO, "PCSX", fmt, list);
 	va_end(list);
+#else
+	// do nothing
+#endif
 }
 
 #endif

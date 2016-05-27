@@ -1,0 +1,19 @@
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes.dex : \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$array.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$attr.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$3.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$2.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$xml.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$1.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$KeybindDialog.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$MenuAdapter.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$string.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/PCSX_ReARMed$4.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$color.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/BuildConfig.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$drawable.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$layout.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R$id.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/classes/net/dancingdemon/pcsx/R.class \
+/home/mycohl/Dev/pcsx_rearmed/ouya/bin/dexedLibs/ouya-sdk-fdb36606e0a17ebbf23edbab4ac90fd8.jar \
